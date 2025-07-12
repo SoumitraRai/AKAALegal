@@ -1,12 +1,12 @@
 "use client";
 
-import React, { Suspense } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import dynamic from 'next/dynamic';
 
 type LazyComponentProps = {
-  component: React.ComponentType<any>;
-  props?: Record<string, any>;
+  component: React.ComponentType<React.ComponentProps<any>>;
+  props?: Record<string, unknown>;
   fallback?: React.ReactNode;
   threshold?: number;
 };
@@ -45,5 +45,7 @@ export const createLazyComponent = <T extends object>(
     ssr,
   });
   
-  return (props: T) => <LazyLoadedComponent {...props} />;
+  const LazyWrapper = (props: T) => <LazyLoadedComponent {...props} />;
+  LazyWrapper.displayName = 'LazyWrapper';
+  return LazyWrapper;
 };

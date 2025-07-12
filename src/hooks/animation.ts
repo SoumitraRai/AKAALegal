@@ -36,8 +36,9 @@ export function useCounterAnimation(
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      const element = counterRef.current;
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [endValue, duration, hasAnimated]);
@@ -100,11 +101,12 @@ export function useIntersectionObserver(
     }
     
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      const element = ref.current;
+      if (element) {
+        observer.unobserve(element);
       }
     };
-  }, [options.threshold, triggerOnce]);
+  }, [options.threshold, triggerOnce, observerOptions]);
   
   return { ref, isVisible };
 }

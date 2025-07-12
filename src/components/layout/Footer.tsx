@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/utils/cn';
 
 interface FooterProps {
@@ -34,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-8">
                 <div className="relative p-1.5 rounded-sm bg-white/10 h-14 w-14 shadow-inner-light backdrop-blur-sm">
-                  <img src="/assets/images/logo-light.png" alt="UA Legal" className="h-full w-full object-contain" />
+                  <Image src="/assets/images/logo-light.png" alt="UA Legal" width={48} height={48} className="h-full w-full object-contain" />
                   <div className="absolute inset-0 border border-accent/20 rounded-sm"></div>
                   
                   {/* Corner accent */}

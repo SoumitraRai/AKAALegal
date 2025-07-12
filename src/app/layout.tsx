@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto, Playfair_Display, Cormorant_Garamond, Montserrat, Lora, Merriweather } from 'next/font/google';
+import Image from 'next/image';
 import "./globals.css";
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -128,7 +129,7 @@ export default function RootLayout({
                   <div className="relative">
                     <div className="w-16 h-16 bg-accent/20 rounded-sm animate-pulse-slow"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <img src="/assets/images/logo-light.png" alt="UA Legal" className="w-10 h-10 animate-float" />
+                      <Image src="/assets/images/logo-light.png" alt="UA Legal" width={40} height={40} className="animate-float" />
                     </div>
                   </div>
                 </div>
