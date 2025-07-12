@@ -1,0 +1,8 @@
+Texture light image (texture-light.png) should be a subtle, neutral pattern that adds depth but doesn't distract.
+Recommended characteristics:
+- Light beige/ivory color (#f9f7f2)
+- Subtle paper texture or light fabric pattern
+- Opacity around 5-10%
+- Size: 400x400px (will be tiled)
+
+For production, replace this placeholder with an actual texture image.
